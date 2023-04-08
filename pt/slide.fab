@@ -1,4 +1,6 @@
 Slide {
+    slides_rec [slide sep more?] = ‛«slide»«sep»«more»’
+    slides_last [slide] = ‛«slide»’
     slide [title body] = ‛«title»«body»’
     title [line] = ‛title~~«line»’
     body [bodyline+] = ‛«bodyline»’
@@ -8,6 +10,9 @@ Slide {
     line  [word spword* fin] = ‛line~~«word»«spword»«fin»’
 
     spword [sps word] = ‛«sps»«word»’
+    sep [k3dashes] = ‛«k3dashes»’
+    separator [k3dashes fin] = ‛«k3dashes»«fin»’
+
 
     sps [spc+] = ‛«spc»’
     spc [c] = ‛«c»’

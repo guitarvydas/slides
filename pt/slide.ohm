@@ -1,13 +1,19 @@
 Slide {
+    slides = 
+      | slide separator slides? -- rec
+      | slide -- last
     slide = title body
-    title = line
+    title = ~sep line
     body = bodyline+
-    bodyline = bullet | line
+    bodyline = (bullet | line)
 
-    bullet = "*" sps word spword* fin
-    line = word spword* fin
+    bullet = ~sep "*" sps word spword* fin
+    line = ~sep word spword* fin
 
     spword = sps word
+
+    sep = "---"
+    separator = "---" fin
 
     sps = spc+
     spc = " " | "\t"
@@ -18,5 +24,5 @@ Slide {
       | end -- fini
 
     word = wordchar+
-    wordchar = ~(nl | spc) any
+    wordchar = ~(nl | spc | sep) any
 }

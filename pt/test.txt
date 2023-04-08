@@ -1,4 +1,8 @@
-Slide Title
-line 1
-* bline 2
+Welcome to Slider
+A tiny presentation tool.
 
+---
+
+Slide 2
+line 2
+---
