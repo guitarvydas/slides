@@ -13,7 +13,9 @@ Slide {
     spc = " " | "\t"
 
     nl = "\r"? "\n"
-    fin = nl | end
+    fin =
+      | nl+ -- runOfNLs
+      | end -- fini
 
     word = wordchar+
     wordchar = ~(nl | spc) any

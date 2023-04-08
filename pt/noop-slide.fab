@@ -1,11 +1,11 @@
 Slide {
     slide [title body] = ‛«title»«body»’
-    title [line] = ‛title~~«line»’
+    title [line] = ‛«line»’
     body [bodyline+] = ‛«bodyline»’
     bodyline [x] = ‛«x»’
 
-    bullet [kstar sps word spword* fin] = ‛bullet~~«kstar»«sps»«word»«spword»«fin»’
-    line  [word spword* fin] = ‛line~~«word»«spword»«fin»’
+    bullet [kstar sps word spword* fin] = ‛«kstar»«sps»«word»«spword»«fin»’
+    line  [word spword* fin] = ‛«word»«spword»«fin»’
 
     spword [sps word] = ‛«sps»«word»’
 
@@ -13,8 +13,7 @@ Slide {
     spc [c] = ‛«c»’
 
     nl [ret? nl] = ‛«ret»«nl»’
-    fin_runOfNLs [nl+] = ‛«nl»’
-    fin_fini [x] = ‛«x»’
+    fin [c] = ‛«c»’
 
     word [wordchar+] = ‛«wordchar»’
     wordchar [c] = ‛«c»’
