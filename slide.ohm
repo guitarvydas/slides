@@ -1,0 +1,12 @@
+Slide {
+slide = title line*
+title = titleChar+ nl
+titleChar = ~nl any
+line =
+  | bulletedLine nl
+  | nonBulletedLine nl
+bulletedLine = "*" lineChar+
+nonBulletedLine = lineChar+
+lineChar = ~nl ~"*" any
+nl = "\n"
+}

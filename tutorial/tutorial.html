@@ -1,0 +1,41 @@
+<body>
+    <script src="https://unpkg.com/mithril/mithril.js"></script>
+    <script>
+      var root = document.body;
+      var count = 77;
+
+      var increment = function() {
+	  m.request({
+	      method: "PUT",
+	      url: "//rem-rest-api.herokuapp.com/api/tutorial/1",
+              body: {count: count + 1},
+              withCredentials: true,
+	  })
+	      .then(function(data) {
+		  count = parseInt(data.count);
+		  console.log (data);
+		  console.log (count);
+	      })
+      }
+
+      var Hello = {
+	  view: function() {
+              return m("main", [
+		  m("h1", {class: "title"}, "My first app 15"),
+		  m("button", 
+		    {onclick: increment},
+		    `A PT77-button ${count}`),
+              ])
+	  }
+      }
+      var Splash = {
+	  view: function() {
+              return m("a", {href: "#!/helloxyz"}, "Enter PT!")
+	  }
+      }
+      m.route(root, "/splash", {
+	  "/splash": Splash,
+	  "/helloxyz": Hello,
+      })
+    </script>
+</body>

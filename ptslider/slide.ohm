@@ -1,0 +1,17 @@
+Slide {
+    slide = title body?
+    title = line
+    body = bodyline+
+    bodyline = bullet | line
+
+    bullet = "*" sps word (sps word)* nl
+    line = word (sps word)* nl
+
+    sps = spc+
+    spc = " " | "\t"
+
+    nl = "\r"? "\n"
+
+    word = wordchar+
+    wordchar = ~(nl | spc) any
+}

@@ -1,0 +1,18 @@
+<body>
+    <script src="https://unpkg.com/mithril/mithril.js"></script>
+    <script>
+      var root = document.body;
+      var count = 99;
+      var HelloPT = {
+	  view: function() {
+              return m("main", [
+		  m("h1", {class: "title"}, "My first app 14"),
+		  m("button", 
+		    {onclick: function() {count++}}, 
+		    `A PT-button ${count}`),
+              ])
+	  }
+      }
+      m.mount(root, HelloPT);
+    </script>
+</body>

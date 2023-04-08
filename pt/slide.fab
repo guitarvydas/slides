@@ -1,0 +1,20 @@
+Slide {
+    slide [title body] = ‛«title»«body»’
+    title [line] = ‛«line»’
+    body [bodyline+] = ‛«bodyline»’
+    bodyline [x] = ‛«x»’
+
+    bullet [kstar sps word spword* fin] = ‛«kstar»«sps»«word»«spword»«fin»’
+    line  [word spword* fin] = ‛«word»«spword»«fin»’
+
+    spword [sps word] = ‛«sps»«word»’
+
+    sps [spc+] = ‛«spc»’
+    spc [c] = ‛«c»’
+
+    nl [ret? nl] = ‛«ret»«nl»’
+    fin [c] = ‛«c»’
+
+    word [wordchar+] = ‛«wordchar»’
+    wordchar [c] = ‛«c»’
+}
