@@ -5,4 +5,5 @@ A tiny presentation tool.
 
 Slide 2
 line 2
+* bulleted line 3
 ---

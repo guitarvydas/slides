@@ -6,7 +6,7 @@ Slide {
     body [bodyline+] = ‛«bodyline»’
     bodyline [x] = ‛«x»’
 
-    bullet [kstar sps word spword* fin] = ‛bullet~~«kstar»«sps»«word»«spword»«fin»’
+    bullet [kstar sps word spword* fin] = ‛bullet~~«word»«spword»«fin»’
     line  [word spword* fin] = ‛line~~«word»«spword»«fin»’
 
     spword [sps word] = ‛«sps»«word»’
