@@ -1,0 +1,14 @@
+# Welcome to Slider
+A tiny presentation tool.
+
+---
+
+# Slide 2
+line 2
+- bulleted line 3
+line 4
+- bulleted line 5
+line 6
+---
+# Slide 3
+- bulleted line 7
