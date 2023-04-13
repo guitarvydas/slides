@@ -15,52 +15,84 @@ var presentation = [
 	"* Keynote",
 	"* Obsidian",
 	"* etc",
-	"dummy line"
+    ""
     ],
 [
 "Lightweight",
 "* we want something lightweight",
 "* like \"markdown\" for slides",
 "* but, less ad-hoc than markdown",
-"dummy line"
+    ""
 ],
 [
 "Elements",
 "* Title",
 "* lines",
 "* bullets",
-"dummy line",
+    ""
 ],[
 "Text Formatting",
 "* italic",
 "* bold",
-"dummy line",
+    ""
 ],[
 "Technologies",
 "* Ohm-JS for pattern matching",
 "* Ohm-JS / JavaScript for actions after pattern matching",
 "* Mithril for formatting Webpage",
-"dummy line",
+    ""
 ],[
 "Lines of Code",
     "* Grammar: 12 lines",
     "* Actions: 15 lines",
     "* Mithril: 66 lines",
-    "dummy line",
+    ""
 ],[
 "Github Repo",
 "...",
-"dummy line",
+    ""
 ],[
 "Video",
 "...",
-"dummy line",
+    ""
 ],[
 "Team",
 "* Author: Jos'h Fuller",
 "* Kibitzing: Paul Tarvydas",
-"dummy line",
-]
+    ""
+],
+    [
+	"Appendix - Closing Thoughts",
+	""
+    ],
+    [
+	"Inspiration",
+	""
+    ],
+    [
+	"Did it turn out like we'd hoped?",
+	"",
+    ],
+    [
+	"What Did We Learn?",
+	"",
+    ],
+    [
+	"Bugs",
+	"* need to save intermediate work to allow re-loading",
+	"* italics?",
+	""
+    ],
+    [
+	"Future",
+	""
+    ],
+    [
+	"Appendix - Install / Build",
+	"Nothing to build",
+	"Open _index.html_ in a browser",
+	"",
+    ]
 ];
 var next = 1;
 
@@ -70,7 +102,7 @@ var next = 1;
 const g2 = String.raw`Slide {
     slide = h1 body*
     body = ul | h2
-    h1 = text nl?
+    h1 = text nl
     ul = li+
     li = "*" sp text nl
     h2 = text nl?
